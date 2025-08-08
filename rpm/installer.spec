@@ -5,7 +5,7 @@ Summary:        linglong web store installer
 
 License:        GPL-3.0-or-later
 URL:            https://github.com/OpenAtom-Linyaps/linyaps-web-store-installer
-Source0:        linyaps-web-store-installer-%{version}.tar
+Source0:        linglong-installer-%{version}.tar
 
 BuildRequires:  cmake >= 3.0
 BuildRequires:  gcc-c++
@@ -25,13 +25,16 @@ ecosystem with OCI standard support.
 %setup -q
 
 %build
-%cmake \
+
+mkdir build && cd build
+cmake \
     -DCMAKE_BUILD_TYPE=Release \
-    -DCMAKE_INSTALL_PREFIX=%{_prefix}
-%cmake_build
+    -DCMAKE_INSTALL_PREFIX=%{_prefix} ..
+%make_build
 
 %install
-%cmake_install
+cd build
+%make_install INSTALL_ROOT=%{buildroot}
 
 %post
 xdg-mime default space.linglong.Installer.desktop x-scheme-handler/og
