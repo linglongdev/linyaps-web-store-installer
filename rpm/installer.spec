@@ -1,7 +1,7 @@
-Name:           linyaps-web-store-installer
+Name:           linglong-installer
 Version:        1.6.6
 Release:        1%{?dist}
-Summary:        Deepin sandbox with OCI standard installer
+Summary:        linglong web store installer
 
 License:        GPL-3.0-or-later
 URL:            https://github.com/OpenAtom-Linyaps/linyaps-web-store-installer
@@ -17,8 +17,8 @@ Requires:       linglong-bin
 Requires:       xdg-utils
 
 %description
-linyaps-web-store-installer is a package installer for the Linyaps Web store.
-It provides a GUI interface for installing applications from the Linyaps
+linglong-installer is a package installer for the linglong web store.
+It provides a GUI interface for installing applications from the linglong
 ecosystem with OCI standard support.
 
 %prep
